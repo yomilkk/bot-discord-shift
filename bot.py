@@ -2,6 +2,8 @@ import discord
 from discord import app_commands
 import os
 
+print("TOKEN =", os.getenv("TOKEN"))
+
 TOKEN = os.getenv("TOKEN")
 
 LOG_CHANNEL_ID = 1501476498706796554  # remplace par l'ID de ton salon logs
