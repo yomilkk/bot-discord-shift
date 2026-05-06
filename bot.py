@@ -4,8 +4,8 @@ import os
 
 TOKEN = os.getenv("TOKEN")
 
-LOG_CHANNEL_ID = 123456789012345678  # remplace par l'ID de ton salon logs
-ALLOWED_ROLE_ID = 987654321098765432  # remplace par l'ID du rôle "chaters"
+LOG_CHANNEL_ID = 1501476498706796554  # remplace par l'ID de ton salon logs
+ALLOWED_ROLE_ID = 1501235658604413120  # remplace par l'ID du rôle "chaters"
 
 class MyBot(discord.Client):
     def __init__(self):
@@ -31,7 +31,7 @@ async def shift(interaction: discord.Interaction, hours: float, tips: float, pay
         await interaction.response.send_message("❌ Pas autorisé", ephemeral=True)
         return
 
-    log_channel = bot.get_channel(LOG_CHANNEL_ID)
+    log_channel = interaction.client.get_channel(LOG_CHANNEL_ID)
 
     embed = discord.Embed(title="📊 Nouveau shift", color=0x00ff00)
     embed.add_field(name="👤 Membre", value=interaction.user.mention, inline=False)
