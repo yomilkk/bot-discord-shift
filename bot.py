@@ -44,4 +44,4 @@ async def shift(interaction: discord.Interaction, hours: float, tips: float, pay
 
     await interaction.response.send_message("✅ Shift envoyé", ephemeral=True)
 
-bot.run(MTUwMTM0MTgxNjI5OTk3ODg2Mw.GUYxOo.vs2zXvqhduOT1agiPsm0nBqPN4P9M9Gd4YYInc)
+bot.run(TOKEN)
